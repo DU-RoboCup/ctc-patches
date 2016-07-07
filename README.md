@@ -10,14 +10,15 @@ Next, in the file `/home/vagrant/NAO/devtools/ctc-linux64-atom-2.1.4.13/boost/in
 #ifndef BOOST_NO_DEFAULTED_FUNCTIONS
     BOOST_CONSTEXPR noncopyable() = default;
     ~noncopyable() = default;
+#else
 ```
 
 with the phrase
 ```
 #if !defined(BOOST_NO_DEFAULTED_FUNCTIONS) && !defined(BOOST_NO_CXX11_NON_PUBLIC_DEFAULTED_FUNCTIONS) 
-      BOOST_CONSTEXPR noncopyable() = default; 
-      ~noncopyable() = default; 
-  #else
+    BOOST_CONSTEXPR noncopyable() = default; 
+    ~noncopyable() = default; 
+#else
 ```
 
 
