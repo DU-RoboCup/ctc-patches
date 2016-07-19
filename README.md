@@ -1,4 +1,7 @@
 # ctc-patches
+
+**THESE CHAGES ARE UNECESSARY IF USING OUR CUSTOM CTC. PLEASE SWITCH OVER**
+
 Patches for the CTC to compile boost libraries with QI-Build.
 
 **Note: ** without these patches you will be able to compile for the dev environment, but the cross-compiler will fail.
